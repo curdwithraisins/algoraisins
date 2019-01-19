@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "class-name": true,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "no-var-keyword": true,
+    "semicolon": [
+      true,
+      "always",
+      "ignore-bound-class-methods"
+    ],
+    "no-trailing-whitespace": true,
+    "jsdoc-format": true
+  }
+}
