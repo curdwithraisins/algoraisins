@@ -1,7 +1,7 @@
 import { f } from './index';
 import { expect } from 'chai';
 
-describe('raisin_3', () => {
+describe('raisin_4', () => {
     it('return first missed positive number in array', () => {
         let res = f([3, 4, -1, 1]);
         expect(res).to.eql(2);
