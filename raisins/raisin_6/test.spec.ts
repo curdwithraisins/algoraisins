@@ -11,6 +11,6 @@ describe('raisin_6', () => {
         let res = decoder('111');
         expect(res).to.eql(3); // aaa, ak, ka
         res = decoder('12121');
-        expect(res).to.eql(8); // ababa, auba, auu, abau, abla, laba, lla, lau
+        expect(res).to.eql(7); // ababa, auba, auu, abau, abla, laba, lla, lau
     });
 });
