@@ -12,6 +12,10 @@
       "always",
       "ignore-bound-class-methods"
     ],
+    "max-line-length": [
+      true,
+      140
+    ],
     "no-trailing-whitespace": true,
     "jsdoc-format": true
   }
