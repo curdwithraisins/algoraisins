@@ -2,7 +2,7 @@ import { univalSubtree } from './index';
 import { expect } from 'chai';
 import Node from '../../data-structures/Node';
 
-describe('raisin_6', () => {
+describe('raisin_7', () => {
     it('should return 0 if tree has only root', () => {
         const nodes = new Node(0);
         const res = univalSubtree(nodes);
