@@ -40,3 +40,11 @@ export const serialize = (node: Node, i: number = 1): string => {
 
     return s;
 };
+
+export const deserializeJSON = (s: string) => {
+    return JSON.parse(s);
+};
+
+export const serializeJSON = (node: Node) => {
+    return JSON.stringify(node);
+};

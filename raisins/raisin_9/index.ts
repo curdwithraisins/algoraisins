@@ -1,7 +1,13 @@
-const dictionary = ['dog', 'deer', 'deal'];
-
-export const autocomplete = (s: string, d: string[]): string[] => {
-    return [];
+export const updateHash = (hash, q: string) => {
+    for (let i = 1; i < q.length + 1; i++) {
+        const slice = q.slice(0, i);
+        hash[slice] = hash[slice] ? [...hash[slice], q] : [q];
+    }
+    return hash;
 };
 
-autocomplete('do', dictionary);
+export const preprocess = (d: string[], hash = {}): void => d.reduce(updateHash, hash);
+
+export const autocompleteWithPreprocess = (s: string, dic: string[]): string[] => preprocess(dic)[s];
+
+export const autocompleteWithoutPreprocess = (s: string, dic: string[]) => dic.filter((d: string) => d.startsWith(s));
