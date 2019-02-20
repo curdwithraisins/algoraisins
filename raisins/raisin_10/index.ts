@@ -19,6 +19,3 @@ export const staircaseWithCache = (n: number, X: number[]) => {
     }
     return cache[cache.length - 1];
 };
-
-
-staircaseWithCache(4, [1,2]);
