@@ -1,7 +1,7 @@
 export const distinctSubstring = (s: string, k: number) => {
     let longestSub = '';
     for (let i = 0; i < s.length; i++) {
-        const t = tt(s.substring(i), k);
+        const t = checkSub(s.substring(i), k);
         if (t.length > longestSub.length) {
             longestSub = t;
         }
@@ -9,9 +9,8 @@ export const distinctSubstring = (s: string, k: number) => {
     return longestSub;
 };
 
-const tt = (s, k): string => {
+const checkSub = (s, k): string => {
     let sub = '', hash = {};
-    console.log(s);
     for (let i = 0; i < s.length; i++) {
         if (hash[s[i]]) {
             sub += s[i];
