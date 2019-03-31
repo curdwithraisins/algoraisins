@@ -12,7 +12,14 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 
 #### Solution
 
+The solution was taken from https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/.
 
+At the beginning we need to iterate by the first k-th values of an array. We use *while* to shift new value to the beginning of the array till we find the biggest value, then the current, and pop smallest from the end. We always push new value to the array. In this way we receive the largest value at the beginning and remove all the smallest because if they smaller then the current value then they won't be the largest on the next iterations.
+
+After that we check all remaining values starting from *k*. Firstly we store previously founded value to the *i - k* position of the array to return founded maximums. Then we remove values from the beginning of the resulted array till we find a largest value in the current range. After it we can do the same thing as we made before: shift value to the beginning of the array till we find the biggest one and push new number to the array.
+
+At the end we return sliced array from 0 till array.length - k + 1 - this is how large should be our result.
 
 **Сomplexity** 
 
+O(n) time and O(k) space.
