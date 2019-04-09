@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ts-node",
     "test": "mocha -r ts-node/register",
-    "test-all": "mocha -r ts-node/register ./raisins/*/*.spec.ts"
+    "test:all": "mocha -r ts-node/register ./raisins/*/*.spec.ts"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
@@ -20,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test-all"
+      "pre-commit": "npm run test:all"
     }
   }
 }
