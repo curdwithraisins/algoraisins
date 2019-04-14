@@ -7,10 +7,12 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
 
 #### Solution
 
-I have 3 solutions for this task.
+I have 2 solutions for this task.
 
-We can create an array to represent an intersection. In this case we go by each value and increment values in the array iа they are present in the interval. Then check if a new one value is largest then the current max.
+1) Create an array of intersections. For this solution we should go by each interval and increment a number in the resulted array if that number is within the interval. Then check if a new value is largest then the current max and update max if it needed.
+
+2) Sort an array of intervals by ascending start. Then go by each interval and check if previous lecture is finished. If no one of the prev lectures is finished increment number of rooms.
 
 **Сomplexity** 
 
-O(N*logN) - too bad =(
+2) O(N*logN)
