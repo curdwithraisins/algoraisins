@@ -1,7 +1,7 @@
 import { originalSentence } from './index';
 import { expect } from 'chai';
 
-describe('raisin_18', () => {
+describe('raisin_19', () => {
     it('should return a correct set', () => {
         const res = originalSentence('bedbathandbeyond', ['bed', 'bath', 'bedbath', 'and', 'beyond']);
         expect(res).to.eql([

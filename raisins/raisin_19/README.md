@@ -8,7 +8,7 @@ Given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string
 
 #### Solution
 
-
+Firstly, create a hash table by each first later of the words in dictionary. Then go by the given sentence and look for the word from the dictionary by the first later in the sentence. Check if a word from dic the same as in sentence and split sentence by this word. Then recursively do the same. If we have several words for a later and it could be any of them then check both paths. 
 
 **Сomplexity** 
 
