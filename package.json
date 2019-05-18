@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node",
-    "test": "mocha -r ts-node/register",
-    "test:all": "mocha -r ts-node/register ./raisins/*/*.spec.ts"
+    "test": "mocha -r ts-node/register ./general/*/*/*.spec.ts ./raisins/*/*.spec.ts",
+    "test:general": "mocha -r ts-node/register ./general/*/*/*.spec.ts",
+    "test:raisins": "mocha -r ts-node/register ./raisins/*/*.spec.ts"
   },
   "devDependencies": {
     "@types/jest": "23.3.13",
@@ -20,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:all"
+      "pre-commit": "npm run test"
     }
   }
 }
