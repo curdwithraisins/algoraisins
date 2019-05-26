@@ -1,15 +1,16 @@
-import List from '../../data-structures/LinkedList';
+import { LinkedList, LinkedListNode } from '../../data-structures/LinkedList';
 
-export const intersec = (listA: List, listB: List): List => {
+export const intersec = (listA: LinkedList, listB: LinkedList): LinkedListNode => {
     const hashTable = [];
-    let node = listA;
-    do {
-        hashTable[node.current] = true;
-    } while (node = node.next());
+    let currentList: LinkedListNode = listA.head;
 
-    node = listB;
-    while (!hashTable[node.current]) {
-        node = node.next();
+    do {
+        hashTable[currentList.value] = true;
+    } while (currentList = currentList.next);
+
+    currentList = listB.head;
+    while (!hashTable[currentList.value]) {
+        currentList = currentList.next;
     }
-    return node;
+    return currentList;
 };

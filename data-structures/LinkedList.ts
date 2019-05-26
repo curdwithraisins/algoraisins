@@ -1,21 +1,35 @@
-export default class List {
-    private readonly value: any = null;
-    private link: any = null;
+export class LinkedList {
+    public head: LinkedListNode = null;
+    public tail: LinkedListNode = null;
 
-    constructor(n: any) {
-        this.value = n;
+    public append(n: any): LinkedList {
+        const newNode: LinkedListNode = new LinkedListNode(n);
+        if (!this.head) {
+            this.head = newNode;
+        }
+        if (this.tail) {
+            this.tail.next = newNode;
+        }
+        this.tail = newNode;
+        return this;
     }
 
-    public get current(): any {
-        return this.value;
-    };
-
-    public add(n: any): List {
-        this.link = new List(n);
-        return this.next();
+    public prepend(n: any): LinkedList {
+        const nextLink: LinkedListNode = new LinkedListNode(n, this.head);
+        this.head = nextLink;
+        if (!this.tail) {
+            this.tail = nextLink;
+        }
+        return this;
     }
+}
 
-    public next(): List {
-        return this.link;
+export class LinkedListNode {
+    public value: any = null;
+    public next: LinkedListNode = null;
+
+    constructor(v: any, n: LinkedListNode = null) {
+        this.value = v;
+        this.next = n;
     }
 }
