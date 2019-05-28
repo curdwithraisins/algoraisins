@@ -1,3 +1,8 @@
+/**
+ * A double-ended queue (deque) is an abstract data type that generalizes a queue,
+ * for which elements can be added to or removed from either the head or tail.
+*/
+
 export class Dequeue {
     private queue: number[];
     constructor() {
