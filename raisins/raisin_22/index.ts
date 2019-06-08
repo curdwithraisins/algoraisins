@@ -1,16 +1,14 @@
-import { LinkedList, LinkedListNode } from '../../data-structures/LinkedList';
-
-export const intersec = (listA: LinkedList, listB: LinkedList): LinkedListNode => {
-    const hashTable = [];
-    let currentList: LinkedListNode = listA.head;
-
-    do {
-        hashTable[currentList.value] = true;
-    } while (currentList = currentList.next);
-
-    currentList = listB.head;
-    while (!hashTable[currentList.value]) {
-        currentList = currentList.next;
-    }
-    return currentList;
+export const distinctArray = (arr: number[]): number[] => {
+    let longestSub: number[] = [], currentSub: number[] = [], hashTable = {};
+    arr.forEach((v: number) => {
+        if (hashTable[v]) {
+            longestSub = currentSub.length > longestSub.length ? currentSub : longestSub;
+            hashTable = {};
+            currentSub = [v];
+            return;
+        }
+        currentSub.push(v);
+        hashTable[v] = true;
+    });
+    return currentSub.length > longestSub.length ? currentSub : longestSub;
 };

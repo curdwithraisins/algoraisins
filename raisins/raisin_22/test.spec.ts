@@ -1,14 +1,9 @@
-import { intersec } from './index';
+import { distinctArray } from './index';
 import { expect } from 'chai';
-import { LinkedList } from '../../data-structures/LinkedList';
 
 describe('raisin_22', () => {
-    it('should return a cost of painting', () => {
-        const listA = new LinkedList();
-        listA.append(2).append(5).append(8).append(10);
-        const listB = new LinkedList();
-        listB.append(3).append(4).append(8).append(10);
-        const res = intersec(listA, listB);
-        expect(res.value).to.eql(8);
+    it('should return a subarray of distinct values', () => {
+        const res = distinctArray([5, 1, 3, 5, 2, 3, 4, 1]);
+        expect(res).to.eql([5, 2, 3, 4, 1]);
     });
 });
