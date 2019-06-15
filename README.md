@@ -1,7 +1,14 @@
 # algoraisins
 Playground to test algorithms and tasks.
 
-Here you can find short descriptions and examples of the most common data structures and algorithms.
+### Description
+An algorithm is a set of instructions, typically solve a class of problems or perform a computation. Algorithms are unambiguous specifications for performing calculation, data processing, automated reasoning, and other tasks.
+
+As an effective method, an algorithm can be expressed within a finite amount of space and time and in a well-defined formal language for calculating a function. Starting from an initial state and initial input (perhaps empty), the instructions describe a computation that, when executed, proceeds through a finite number of well-defined successive states, eventually producing "output" and terminating at a final ending state. The transition from one state to the next is not necessarily deterministic; some algorithms, known as randomized algorithms, incorporate random input.
+
+Here you can find short descriptions and examples for the most common data structures and algorithms. You can review a code, find a solution for your task, test it, etc.
+
+Feel free to contact me in any cases!
 
 #### Table of Content
 
@@ -12,6 +19,7 @@ Here you can find short descriptions and examples of the most common data struct
 1. [General algorithms](https://github.com/curdwithraisins/algoraisins/tree/master/general)
     1. [Search](https://github.com/curdwithraisins/algoraisins/tree/master/general/search)
         1. [Binary](https://github.com/curdwithraisins/algoraisins/tree/master/general/search/binary)
+        1. [Jump](https://github.com/curdwithraisins/algoraisins/tree/master/general/search/jump)
     1. [Sort](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort)
         1. [Merge](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort/merge)
         1. [Selection](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort/selection)
@@ -21,5 +29,5 @@ Don't forget to take a look at the [interview tasks](https://github.com/curdwith
 
 #### How to:
 * run code: ``npm start ${PATH}``
-* test algorithm: ``npm run test ${PATH}``
+* test algorithm: ``npm test ${PATH}``
 * check all test suits: ``npm run test-all``
