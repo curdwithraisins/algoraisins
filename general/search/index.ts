@@ -1,2 +1,2 @@
-export { binarySearch } from './binary'
-export { jumpSearch } from './jump'
+export { binarySearch } from './binary';
+export { jumpSearch } from './jump';
