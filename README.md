@@ -1,6 +1,8 @@
 # algoraisins
 Playground to test algorithms and tasks.
 
+![Pic](https://i.ibb.co/0j1qBvB/kisspng-dried-fruit-brittle-vegetarian-cuisine-nut-5af62b2b465a32-4898688015260823472882.png)
+
 ### Description
 An algorithm is a set of instructions, typically solve a class of problems or perform a computation. Algorithms are unambiguous specifications for performing calculation, data processing, automated reasoning, and other tasks.
 
