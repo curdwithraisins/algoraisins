@@ -25,6 +25,7 @@ Feel free to contact me in any cases!
     1. [Sort](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort)
         1. [Merge](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort/merge)
         1. [Selection](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort/selection)
+        1. [Quick](https://github.com/curdwithraisins/algoraisins/tree/master/general/sort/quick)
 1. [Raisins :grapes:](https://github.com/curdwithraisins/algoraisins/raisins)
 
 #### PS.
