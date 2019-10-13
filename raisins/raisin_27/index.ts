@@ -23,5 +23,3 @@ export const pascalsRowWithSpace = (k: number): number[] => {
     }
     return row;
 };
-
-pascalsRow(1);
