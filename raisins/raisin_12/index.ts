@@ -1,4 +1,3 @@
-import { createReadStream } from 'fs';
 import { Transform, TransformCallback, Readable } from 'stream';
 
 const randomNum = (array: number[]) => {
@@ -36,6 +35,3 @@ export const randomFromStream = async (stream: Readable) => {
             });
     })
 };
-
-const s = createReadStream(__dirname + '/large.txt');
-randomFromStream(s).then(console.log);

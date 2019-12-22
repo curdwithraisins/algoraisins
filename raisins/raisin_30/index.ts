@@ -21,7 +21,6 @@ list.forEach((row) => {
 
 export const costExplorer = (from: string, to: string, length: number): {path: string[], cost: number}[] => {
     const res = recursion(from, to, 0, length);
-    console.log(res);
     return res.reduce((min, cur) => cur.cost < min.cost ? cur : min, res[0]);
 };
 
