@@ -34,6 +34,13 @@ export class LinkedList {
         this.head = newNode;
         return this;
     }
+
+    public remove(): LinkedList {
+        if (this.tail) {
+            this.tail = this.tail.prev;
+        }
+        return this;
+    }
 }
 
 export class LinkedListNode {
