@@ -1,16 +1,16 @@
 export const getLargestMod = (array: number[]) => {
-    const arrs = [];
+    const setsArray = [];
     array.sort((a, b) => a - b).forEach((v: number) => {
         let exist = false;
-        arrs.forEach((arr: number[]) => {
-            if (!(v % arr[arr.length - 1])) {
-                arr.push(v);
+        setsArray.forEach((set: number[]) => {
+            if (set.every((a) => !(v % a))) {
+                setsArray.push([...set, v]);
                 exist = true;
             }
         });
         if (!exist) {
-            arrs.push([v]);
+            setsArray.push([v]);
         }
     });
-    return arrs.sort((a, b) => b.length - a.length)[0];
+    return setsArray.sort((a, b) => b.length - a.length)[0] || [];
 };
