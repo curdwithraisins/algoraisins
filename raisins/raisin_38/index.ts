@@ -17,7 +17,7 @@ export const getBinaryForest = (n: number, k: number = 1) => {
                 return q;
             });
         }));
-        // console.log(a);
+        console.log(a);
         list.push(a);
     }
     return list;
