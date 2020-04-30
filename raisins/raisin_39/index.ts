@@ -1,24 +1,45 @@
-import { flatten } from 'lodash';
-import Node from '../../data-structures/Node';
+import { LinkedListNode } from "../../data-structures/LinkedList";
 
-export const getBinaryForest = (n: number, k: number = 1) => {
-    if (k > n) return [null];
-    const list = [];
-    for (let i = k; i <= n; i++) {
-        const leftList = getBinaryForest(i - 1, k);
-        const rightList = getBinaryForest(n, i + 1);
-        list.push(...connect(i, leftList, rightList));
+export const sortList = (node: LinkedListNode = null) => {
+    if (!node || !node.next) {
+        return node;
     }
-    return list;
+
+    const middle = findMiddle(node);
+    const rightList = middle.next;
+    console.log(middle);
+    middle.next = null;
+    console.log(middle);
+    const leftRes = sortList(node);
+    const rightRes = sortList(rightList);
+
+    return mergeSort(rightRes, leftRes);
 };
 
-const connect = (c: number, left: any, right: any): Node[] => {
-    return flatten(left.map((l) => {
-        return right.map(r => {
-            const root = new Node(c);
-            root.left = l;
-            root.right = r;
-            return root;
-        });
-    }));
+const findMiddle = (node: LinkedListNode) => {
+    let a = node;
+    let b = node;
+    while (b.next !== null && b.next.next !== null) {
+        a = a.next;
+        b = b.next.next;
+    }
+    return a;
+};
+
+const mergeSort = (a: LinkedListNode, b: LinkedListNode) =>  {
+    let res = null;
+    if (a == null) {
+        return b;
+    }
+    if (b == null) {
+        return a;
+    }
+    if (a.value <= b.value) {
+        res = a;
+        res.next = mergeSort(a.next, b);
+    } else {
+        res = b;
+        res.next = mergeSort(a, b.next);
+    }
+    return res;
 };

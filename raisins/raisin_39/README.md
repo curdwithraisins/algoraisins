@@ -11,3 +11,4 @@ For example, the linked list 4 -> 1 -> -3 -> 99 should become -3 -> 1 -> 4 -> 99
 
 
 **Сomplexity** 
+O(N*logN)

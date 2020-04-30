@@ -1,11 +1,24 @@
-import { getBinaryForest } from './index';
+import { sortList } from './index';
 import { expect } from 'chai';
+import { LinkedList } from '../../data-structures/LinkedList';
 
-describe('raisin_38', () => {
-    describe('should return a list of all trees', () => {
-        it('return correct number of trees', () => {
-            const res = getBinaryForest(3);
-            expect(res.length).to.eql(5);
-        });
+describe('raisin_39', () => {
+    it('return sort licked list', () => {
+        const list = new LinkedList();
+        list.append(1).append(3).append(-1).append(8);
+        const res = sortList(list.head);
+        expect(res.value).to.eql(-1);
+    });
+
+    it('should return null if list is empty', () => {
+        const res = sortList();
+        expect(res).to.eql(null);
+    });
+
+    it('should return node if list has only one element', () => {
+        const list = new LinkedList();
+        list.append(1);
+        const res = sortList(list.head);
+        expect(res).to.eql(list.head);
     });
 });
