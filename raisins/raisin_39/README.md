@@ -19,4 +19,5 @@ Now we have two parts of the list, right and left. Don't forget to set a next va
 When we receive two parts of the list we need to compare a head of the first list and a head of the second list. If first one less them second then the first is a beginning of the sorted list and the second one should be compared with a rest of the first list once again. So we use the same sort and merge again!
 
 **Сomplexity** 
+
 O(N*logN)
