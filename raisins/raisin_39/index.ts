@@ -4,7 +4,6 @@ export const sortList = (node: LinkedListNode = null) => {
     if (!node || !node.next) {
         return node;
     }
-
     const middle = findMiddle(node);
     const rightList = middle.next;
     console.log(middle);
