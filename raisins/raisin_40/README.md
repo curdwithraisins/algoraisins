@@ -10,7 +10,11 @@ You can assume that there will be at most one pair of numbers summing up to the 
 
 #### Solution
 
+1) 
+ 
+2)
 
+3)
 
 **Сomplexity** 
 

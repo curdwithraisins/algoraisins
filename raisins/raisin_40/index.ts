@@ -19,7 +19,7 @@ export const twoNumberSum2 = (array, targetSum) => {
     for (const n of array) {
         const  pattern = targetSum - n;
         if (pattern in nums) {
-            return [pattern, nums]
+            return [pattern, n]
         } else {
             nums[n] = true;
         }
