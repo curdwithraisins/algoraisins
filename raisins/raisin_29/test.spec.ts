@@ -1,4 +1,4 @@
-import { findSelebrity, Person } from './index';
+import { findCelebrity, Person } from './index';
 import { expect } from 'chai';
 
 describe('raisin_29', () => {
@@ -36,13 +36,13 @@ describe('raisin_29', () => {
     };
 
     it("should return a celebrity", () => {
-        const res = findSelebrity([Steve, Brian, Evan, Peter, Tony, Joeh, Jack, Terry]);
+        const res = findCelebrity([Steve, Brian, Evan, Peter, Tony, Joeh, Jack, Terry]);
         expect(res).to.eql(Peter);
     });
 
     it("should return null if no celebrity", () => {
         Peter.knows.push('Tony');
-        const res = findSelebrity([Steve, Brian, Evan, Peter, Tony, Joeh, Jack, Terry]);
+        const res = findCelebrity([Steve, Brian, Evan, Peter, Tony, Joeh, Jack, Terry]);
         expect(res).to.eql(null);
     });
 });

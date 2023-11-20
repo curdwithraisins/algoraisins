@@ -8,7 +8,7 @@ Given a list of N people and the above operation, find a way to identify the cel
 
 #### Solution
 
-First of all we need to do the next checking: if some person knows another one then the first person can't be a selebrity but the second one can. We check each person one by one and reseive the one whos everyone knows.
+First of all we need to do the next checking: if some person knows another one then the first person can't be a celebrity but the second one can. We check each person one by one and receive the one who's everyone knows.
 
 **Сomplexity** 
 
