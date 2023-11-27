@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { longestCommonPrefix } from './index';
 
-describe('raisin_46', () => {
+describe('raisin_47', () => {
     it('should return a valid string', () => {
         let res = longestCommonPrefix(["flower","flow","flight"]);
         expect(res).to.eql("fl");
