@@ -1,4 +1,6 @@
 export const searchInsert = (nums: number[], target: number): number => {
+    if (target < nums[0]) return 0;
+    if (target > nums[nums.length-1]) return nums.length;
     let pointerR = 0, pointerL = nums.length;
     while (pointerR < pointerL) {
         let mid = pointerR + (pointerL - pointerR) / 2;
