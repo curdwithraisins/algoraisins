@@ -1,21 +1,11 @@
 import { expect } from 'chai';
 import { jump } from './index';
 
-// describe('raisin_51', () => {
-//     it('should return a correct position', () => {
-//         let res = searchInsert([1,3,5,6], 5);
-//         expect(res).to.eql(2);
-//         res = searchInsert([1,3,5,6], 2);
-//         expect(res).to.eql(1);
-//     });
-
-//     it('should return at the end position', () => {
-//         let res = searchInsert([1,3,4,5,6], 10);
-//         expect(res).to.eql(5);
-//     });
-
-//     it('should return at the begening position', () => {
-//         let res = searchInsert([2,3,4,5,6], 1);
-//         expect(res).to.eql(0);
-//     });
-// });
+describe('raisin_52', () => {
+    it('should return a correct number', () => {
+        let res = jump([2,3,1,1,4]);
+        expect(res).to.eql(2);
+        res = jump([2,3,1,1,4]);
+        expect(res).to.eql(2);
+    });
+});
