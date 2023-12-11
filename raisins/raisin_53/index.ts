@@ -1,17 +1,12 @@
-export const jump = (nums: number[]): number => {
-    let path = new Array(nums.length).fill(Number.MAX_VALUE);
-
-    path[0] = 0;
-
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 1; j <= nums[i]; j++) {
-            if (i + j < nums.length) {
-                if (path[i+j] > path[i] + 1) {
-                    path[i+j] = path[i] + 1;
-                }
-            }
+export const rotate = (matrix: number[][]) => {
+    let l = matrix.length;
+    for (let row = 0; row < matrix.length - 1; row++) {
+        for (let col = row; col < matrix.length - 1 - row; col++) {
+            let dist = matrix[row][col];
+            matrix[row][col] = matrix[l - 1 - col][row];
+            matrix[l - 1 - col][row] = matrix[l - 1 - row][l - 1 - col];
+            matrix[l - 1 - row][l - 1 - col] = matrix[col][l - 1 - row];
+            matrix[col][l - 1 - row] = dist;
         }
     }
-
-    return path[path.length-1];
 };
