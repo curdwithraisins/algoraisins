@@ -18,6 +18,8 @@ Feel free to contact me in any cases!
     1. [Dequeue](https://github.com/curdwithraisins/algoraisins/blob/master/data-structures/Dequeue.ts)
     1. [Linked List](https://github.com/curdwithraisins/algoraisins/tree/master/data-structures/LinkedList.ts)
     1. [Node](https://github.com/curdwithraisins/algoraisins/tree/master/data-structures/Node.ts)
+    1. [MinHeap](https://github.com/curdwithraisins/algoraisins/tree/master/data-structures/MinHeap.ts)
+    1. [MaxHeap](https://github.com/curdwithraisins/algoraisins/tree/master/data-structures/MaxHeap.ts)
 1. [General algorithms :pear:](https://github.com/curdwithraisins/algoraisins/tree/master/general)
     1. [Search](https://github.com/curdwithraisins/algoraisins/tree/master/general/search)
         1. [Binary](https://github.com/curdwithraisins/algoraisins/tree/master/general/search/binary)
